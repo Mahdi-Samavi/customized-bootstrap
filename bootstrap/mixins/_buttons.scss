@@ -1,0 +1,15 @@
+@import "~bootstrap/scss/mixins/buttons";
+
+@mixin button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
+  color: $background;
+  @include gradient-bg($body-bg);
+  border-color: $border;
+  @include box-shadow($btn-box-shadow);
+  text-shadow: 0 0 1px $background;
+
+  @include hover() {
+    color: $background;
+    @include gradient-bg(darken($body-bg, 2%));
+    text-shadow: 0 0 3px $background;
+  }
+}

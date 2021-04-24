@@ -1,0 +1,9 @@
+@import "~bootstrap/scss/mixins/gradients";
+
+@mixin gradient-bg($color) {
+  @if $enable-gradients {
+    background: $color linear-gradient(145deg, mix($body-bg, $color, 45%), $color) repeat-x;
+  } @else {
+    background-color: $color;
+  }
+}
